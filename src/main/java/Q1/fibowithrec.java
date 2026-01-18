@@ -1,6 +1,6 @@
-package org.Nurel;
+package Q1;
 
-public class Q1 {
+public class fibowithrec {
     public static void main(String[] args) {
         System.out.println(fiborec(6));
     }
