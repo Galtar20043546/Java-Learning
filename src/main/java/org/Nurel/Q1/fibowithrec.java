@@ -1,4 +1,4 @@
-package Q1;
+package org.Nurel.Q1;
 
 public class fibowithrec {
     public static void main(String[] args) {
