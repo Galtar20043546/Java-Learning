@@ -1,8 +1,8 @@
 package org.Nurel.Q1;
 
-public class fibowithrec {
+public class recfibo {
     public static void main(String[] args) {
-        System.out.println(fiborec(6));
+        System.out.println(fiborec(5));
     }
 
     public static int fiborec(int n) {
