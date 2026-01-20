@@ -14,7 +14,7 @@ public class BinarySearchLowerBound {
         int result = -1;
 
         while (low <= high){
-            int mid = low + (high - low) / 2;
+            int mid = (low + high) / 2;
             int guess = array[mid];
 
             if (guess == target){

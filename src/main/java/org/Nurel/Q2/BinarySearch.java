@@ -7,7 +7,7 @@ public class BinarySearch {
         // int[] myArray = {1}; // массив с одним элементом.
         // int[] myArray = {1,4,9};   // массив с тремя элементами.
         int[] myArray = {1,2,4,5,7,9,11,14,17,20,23}; // четное/нечетное число элементов.
-        int target = 1;
+        int target = 14;
 
         int result = biSearch(myArray,target);
 
