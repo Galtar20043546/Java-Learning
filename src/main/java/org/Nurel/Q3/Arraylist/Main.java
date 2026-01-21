@@ -2,13 +2,21 @@ package org.Nurel.Q3.Arraylist;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayListString arrayListQ = new ArrayListString(6);
-        arrayListQ.add("Apple");
-        arrayListQ.add("Banana");
-        arrayListQ.add("Berry");
-        arrayListQ.add("Cherry");
-        arrayListQ.add("Watermelon");
-        arrayListQ.add("Orange");
+        ArrayListDouble arrayListQ = new ArrayListDouble(6);
+
+        arrayListQ.add(2.2);
+        arrayListQ.add(4.5);
+        arrayListQ.add(5.76);
+        arrayListQ.add(3.3);
+        arrayListQ.add(7.256);
+        arrayListQ.add(10.01);
+
+        // arrayListQ.add("Apple");
+        // arrayListQ.add("Banana");
+        // arrayListQ.add("Berry");
+        // arrayListQ.add("Cherry");
+        // arrayListQ.add("Watermelon");
+        // arrayListQ.add("Orange");
 
         // arrayListQ.add(2);
         // arrayListQ.add(3);
