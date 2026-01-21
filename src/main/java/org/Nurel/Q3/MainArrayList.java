@@ -1,6 +1,4 @@
-package org.Nurel;
-
-import org.Nurel.Q3.ArrayListQ;
+package org.Nurel.Q3;
 
 public class MainArrayList {
     public static void main(String[] args) {
