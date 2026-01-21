@@ -36,7 +36,7 @@ public class ArrayListInteger {
     }
 
     public int getCapacity(){
-        return capacity;
+        return array.length;
     }
 
 }

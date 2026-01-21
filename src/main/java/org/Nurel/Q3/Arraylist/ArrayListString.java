@@ -35,6 +35,6 @@ public class ArrayListString {
         return size;
     }
     public int getCapacity(){
-        return capacity;
+        return array.length;
     }
 }
