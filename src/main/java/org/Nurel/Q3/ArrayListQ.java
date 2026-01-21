@@ -1,26 +1,42 @@
 package org.Nurel.Q3;
 
-import java.util.ArrayList;
-
 public class ArrayListQ {
-    public static void main(String[] args) {
-        ArrayList<String> el = new ArrayList<String>(); //Создание ArrayList/LinkedList
+    private Integer[] array;
+    private int size;
+    private int capacity;
 
-        el.add("1");  // добавление элемента
-        el.add("2");
-        el.add("5");
-        el.add("9");
-        System.out.println(el.get(0));  //получение элемента по заданному индексу
-        System.out.println(el.get(2));
-
-
-        el.remove(3);  // удаление элемента по заданному индексу
-        el.remove(2);
-
-        System.out.println(el);
-
-        System.out.println(el.size());  // получение кол-ва элементов (size)
-
-        el.ensureCapacity(20);  // (Для ArrayList) получение емкости (capacity)
+    public ArrayListQ(int capacity) {
+        this.array = new Integer[capacity];
+        this.size = 0;
+        this.capacity = capacity;
     }
+
+    public void add(int element){
+        array[size] = element;
+        size++;
+    }
+    public Integer get(int index){
+        return array[index];
+    }
+
+    public Integer remove(int index){
+        Integer removedEl = array[index];
+
+        for (int i = index; i < size -1; i++) {
+            array[i] = array[i+1];
+        }
+        array[size - 1] = null;
+        size--;
+
+        return removedEl;
+    }
+
+    public int size(){
+        return size;
+    }
+
+    public int getCapacity(){
+        return capacity;
+    }
+
 }
