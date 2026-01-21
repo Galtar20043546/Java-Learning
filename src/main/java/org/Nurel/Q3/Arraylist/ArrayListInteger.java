@@ -1,11 +1,11 @@
-package org.Nurel.Q3;
+package org.Nurel.Q3.Arraylist;
 
-public class ArrayListQ {
+public class ArrayListInteger {
     private Integer[] array;
     private int size;
     private int capacity;
 
-    public ArrayListQ(int capacity) {
+    public ArrayListInteger(int capacity) {
         this.array = new Integer[capacity];
         this.size = 0;
         this.capacity = capacity;
