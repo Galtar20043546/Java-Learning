@@ -1,6 +1,6 @@
 package q8;
 
-public class ArrayListGenerics<K, V> {
+public class ArrayListGenerics<T> {
     private final Integer[] array;
     private int size;
 
