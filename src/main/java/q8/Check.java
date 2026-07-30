@@ -1,6 +1,6 @@
 package q8;
 
-public class HashMapGenerics<K, V> {
+public class Check<K, V> {
     private static class Node<K, V> {
         Node<K, V> next;
         K key;
@@ -15,9 +15,9 @@ public class HashMapGenerics<K, V> {
         }
     }
 
-    private final Node<K,V>[] buckets;
+    private final Node<K, V>[] buckets;
 
-    public HashMapGenerics() {
+    public Check() {
         buckets = new Node[1];
         buckets[0] = null;
     }
@@ -25,7 +25,7 @@ public class HashMapGenerics<K, V> {
     public void put(K key, V value) {
         Node<K, V> first = buckets[0];
 
-        while(first != null) {
+        while (first != null) {
             if (first.key.equals(key)) {
                 first.value = value;
                 return;
@@ -34,15 +34,18 @@ public class HashMapGenerics<K, V> {
         }
 
         Node<K, V> prev = buckets[0];
+        int hash = (key == null) ? 0 : key.hashCode();
 
-        buckets[0] = new Node<>(0, key, value, prev);
+        buckets[0] = new Node<>(hash, key, value, prev);
     }
 
-    public V get(K key)  {
+    public V get(K key) {
         Node<K, V> first = buckets[0];
 
-        while(first != null) {
-            if (first.key == key) return first.value;
+        while (first != null) {
+            if (first.key.equals(key)) {
+                return first.value;
+            }
             first = first.next;
         }
 
@@ -70,5 +73,4 @@ public class HashMapGenerics<K, V> {
         }
         return result.toString();
     }
-
 }

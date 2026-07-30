@@ -1,10 +1,11 @@
 package q6;
 
+import q8.HashMapGenerics;
+
 public class RickAstley {
     public static void main(String[] args) {
 
-        HashMapStringInteger text = new HashMapStringInteger();
-
+        HashMapGenerics<String, Integer> text = new HashMapGenerics<>();
         String song = " We're no strangers to love " +
                       " You know the rules and so do I " +
                       " A full commitment's what I'm thinking of " +
