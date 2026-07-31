@@ -34,7 +34,6 @@ public class HashMapGenerics<K, V> {
         }
 
         Node<K, V> prev = buckets[0];
-
         buckets[0] = new Node<>(0, key, value, prev);
     }
 
@@ -42,10 +41,9 @@ public class HashMapGenerics<K, V> {
         Node<K, V> first = buckets[0];
 
         while(first != null) {
-            if (first.key == key) return first.value;
+            if (first.key.equals(key)) return first.value;
             first = first.next;
         }
-
         return null;
     }
 
@@ -70,5 +68,4 @@ public class HashMapGenerics<K, V> {
         }
         return result.toString();
     }
-
 }
