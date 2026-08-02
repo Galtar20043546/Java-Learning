@@ -9,12 +9,9 @@ import java.util.Objects;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Тесты, проверяющие именно работу Дженериков в HashMapGenerics<K, V>:
- * - что класс корректно работает с разными парами типов;
- * - что несколько экземпляров с разными типами не мешают друг другу;
- * - что вложенные generic-типы (List, сам HashMapGenerics) работают как значения;
- * - что ключ-объект работает по контракту equals()/hashCode(), как и положено
- *   для generic-ключа в хэш-таблице.
+ * Юнит-тесты для {@link HashMapGenerics}.
+ * Проверяют базовую функциональность, обработку граничных случаев
+ * и работу с разными типами данных (не только String/Integer/Double).
  */
 class HashMapGenericsTypeTest {
 
