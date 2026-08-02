@@ -13,7 +13,7 @@ public class LinkedListGenerics<T> {
         }
     }
 
-    private Node<T> head;
+    private Node<T> head;   
     private Node<T> tail;
     private int size;
 
