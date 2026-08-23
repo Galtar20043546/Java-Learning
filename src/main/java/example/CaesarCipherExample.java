@@ -1,11 +1,9 @@
 package example;
 
-import q8.HashMapGenerics;
-
 import java.util.Objects;
 import java.util.Scanner;
 
-public class CaesarEncrypt {
+public class CaesarCipherExample {
     public static final String ENGLISH_ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 
     public static final String RUSSIAN_ALPHABET = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
