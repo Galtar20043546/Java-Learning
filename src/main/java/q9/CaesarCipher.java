@@ -8,7 +8,7 @@ public class CaesarCipher {
 
     public static final String RUSSIAN_ALPHABET = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
 
-    public static String encrypt(String language,String message, int shift) {
+    public static String encrypt(String language, String message, int shift) {
         if (language == null || message == null) {
             throw new IllegalArgumentException("Язык и сообщение не могут быть null");
         }
@@ -19,24 +19,11 @@ public class CaesarCipher {
 
         if (Objects.equals(language, "English")){
             alphabet = ENGLISH_ALPHABET;
-        } else if (Objects.equals(language,"Russian")){
+        } else if (Objects.equals(language, "Russian")){
             alphabet = RUSSIAN_ALPHABET;
         } else {
             throw new IllegalArgumentException("Только English или Russian");
         }
-
-//        for (int i = 0; i < message.length(); i++) {
-//            char currentChar = message.charAt(i);
-//            int position = alphabet.indexOf(currentChar);
-//
-//            if (position != -1) {
-//                int newPosition = (position + shift) % alphabet.length();
-//                encrypted.append(alphabet.charAt(newPosition));
-//
-//            } else {
-//                encrypted.append(currentChar);
-//            }
-//        }
 
         HashMapGenerics<Character, Integer> charPosition = new HashMapGenerics<>();
         for (int i = 0; i < alphabet.length(); i++) {
@@ -50,7 +37,11 @@ public class CaesarCipher {
 
             if (position != null) {
                 int newPosition = (position + shift) % alphabet.length();
+                if (newPosition < 0) {
+                    newPosition = alphabet.length() + newPosition;
+                }
                 encrypted.append(alphabet.charAt(newPosition));
+
             } else {
                 encrypted.append(currentChar);
             }
@@ -64,7 +55,7 @@ public class CaesarCipher {
 
     public static void main(String[] args) {
         if (args.length != 4) {
-            System.out.println("Usage: java q9.CaesarEncrypt <language> <operation> <text> <shift>");
+            System.out.println("Usage: java q9.CaesarCipher <language> <operation> <text> <shift>");
             return;
         }
 
@@ -81,8 +72,5 @@ public class CaesarCipher {
         }
 
         System.out.println("\nResult: " + result);
-
-
     }
 }
-
